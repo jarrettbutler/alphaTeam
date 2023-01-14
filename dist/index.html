@@ -1,7 +1,4 @@
-class HTML {
-    static generateHTML(answers) {
-        return `
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,14 +15,14 @@ class HTML {
     <header>
         <nav class="navbar-brand bg-body-tertiary">
             <div class="container-fluid bg-danger text-white">
-                <h1 class="navbar-text p-3 text-center">${answers.title}</h1>
+                <h1 class="navbar-text p-3 text-center">Alpha Team</h1>
             </div>
         </nav>
     </header>
 
     <main class="grid gap-3 text-center">
         <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">${answers.managerName}<br />${manager.getRole()}</div>
+            <div class="card-header bg-primary text-white">Jarrett<br />☕Manager</div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: 1</li>
                 <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
@@ -57,7 +54,3 @@ class HTML {
         crossorigin="anonymous"></script>
 </body>
 </html>
-        `
-    }
-}
-module.exports = HTML;

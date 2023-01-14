@@ -9,7 +9,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --verbose test/"
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
