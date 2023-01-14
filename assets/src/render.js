@@ -1,4 +1,7 @@
 class HTML {
+    //Need to create a function that when I input the team member it appends the html file
+
+    //Need to create a function that when I input the 
     static generateHTML(answers) {
         return `
         <!DOCTYPE html>

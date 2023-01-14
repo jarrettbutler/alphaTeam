@@ -8,6 +8,9 @@ const Engineer = require('./assets/lib/Engineer');
 const Intern = require('./assets/lib/Intern');
 
 //Here are the questions that will be promted with
+//Need to find a way to seperate the prompts so that it will reask the questions in logicacl orders
+//Should I seperate them?
+//Alos need to make function that takes the inputs and creates the members profile
 const questions = [
     {
         type: 'Input',
