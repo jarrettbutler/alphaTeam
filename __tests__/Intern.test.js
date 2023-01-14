@@ -71,7 +71,7 @@ describe('Intern', () => {
             it('Should get the Role from object', () => {
                 const intern = new Intern();
 
-                expect(intern.getRole()).toEqual('Intern')
+                expect(intern.getRole()).toEqual('🧑‍🎓Intern')
             });
         });
     });

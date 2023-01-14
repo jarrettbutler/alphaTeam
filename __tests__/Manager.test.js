@@ -71,7 +71,7 @@ describe('Manager', () => {
             it('Should get the Role from object', () => {
                 const manager = new Manager();
 
-                expect(manager.getRole()).toEqual('Manager')
+                expect(manager.getRole()).toEqual('☕Manager')
             });
         });
     });
