@@ -1,6 +1,16 @@
 class HTML {
     //Need to create a function that when I input the team member it appends the html file
-
+static appendEmployeeCard() {`
+<div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
+<div class="card-header bg-primary text-white">$Jarrett<br />👓Manager</div>
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">ID: 1</li>
+    <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
+            class="card-link">jbutler98@hotmail.com</a></li>
+    <li class="list-group-item">Office Number: 1</li>
+</ul>
+</div>`
+}
     //Need to create a function that when I input the 
     static generateHTML(answers) {
         return `
@@ -28,7 +38,7 @@ class HTML {
 
     <main class="grid gap-3 text-center">
         <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">${answers.managerName}<br />${manager.getRole()}</div>
+            <div class="card-header bg-primary text-white">$Jarrett<br />👓Manager</div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">ID: 1</li>
                 <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
