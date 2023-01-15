@@ -12,7 +12,7 @@ class HTML {
     </div>`
         }
     //Need to create a function that when I input the 
-    static generateHTML(projectDirectory) {
+    static generateHTML(answers) {
     return `
         <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +37,7 @@ class HTML {
     </header>
 
     <main class="grid gap-3 text-center">
-        ${this.appendEmployeeCard(projectDirectory)}
+        ${this.appendEmployeeCard(answers.projectDirectory)}
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"

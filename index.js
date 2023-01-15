@@ -11,25 +11,25 @@ const Intern = require('./assets/lib/Intern');
 const projectDirectory = [];
 //Here are the questions that will be promted with
 //This prompt function asks the user the name of the project
-const initialQuestions = () => {
-    inquirer.prompt([
-        {
-            type: 'Input',
-            name: 'title',
-            message: 'What is the title or name of your project?',
-            validate: (titleInput) => {
-                if (titleInput) {
-                    return true;
-                } else {
-                    console.log("Please enter the title or name of the project")
-                    return false;
-                }
-            },
-        },])
-        .then(() => {
-            managerQuestions();
-        })
-}
+// const initialQuestions = () => {
+//     inquirer.prompt([
+//         {
+//             type: 'Input',
+//             name: 'title',
+//             message: 'What is the title or name of your project?',
+//             validate: (titleInput) => {
+//                 if (titleInput) {
+//                     return true;
+//                 } else {
+//                     console.log("Please enter the title or name of the project")
+//                     return false;
+//                 }
+//             },
+//         },])
+//         .then(() => {
+//             managerQuestions();
+//         })
+// }
 //This prompt asks the information about the project manager and creates the manager
 const managerQuestions = () => {
     inquirer.prompt([
@@ -261,7 +261,7 @@ const internQuestions = () => {
 
 //this it the function that runs the prompts which then takes the answers and injects them into the render.js file
 //Which then creates the index.html file so that it can auto fill the requirements
-const finished = (projectDirectory) => {
+const finished = () => {
     console.log(projectDirectory);
     const html = HTML.generateHTML(projectDirectory)
     fs.writeFile('./dist/index.html', html, function (err) {
@@ -273,4 +273,5 @@ const finished = (projectDirectory) => {
     })
 };
 
-initialQuestions();
+// initialQuestions();
+managerQuestions();
