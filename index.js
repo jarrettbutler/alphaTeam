@@ -104,6 +104,7 @@ const initialQuestions = () => {
             switch(answers.addMember) {
                 case 'Yes':
                 newEmployeeQuestions();
+                break;
                 case 'No, I am done adding members':
                 finished();
                 break;
@@ -123,6 +124,7 @@ const initialQuestions = () => {
         switch(answers.memberType) {
             case 'Engineer':
                 engineerQuestions();
+                break;
                 case 'Intern':
                     internQuestions();
                     break;
