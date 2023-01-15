@@ -1,19 +1,19 @@
 class HTML {
     //Need to create a function that when I input the team member it appends the html file
-static appendEmployeeCard() {`
-<div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-<div class="card-header bg-primary text-white">$Jarrett<br />👓Manager</div>
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">ID: 1</li>
-    <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
-            class="card-link">jbutler98@hotmail.com</a></li>
-    <li class="list-group-item">Office Number: 1</li>
-</ul>
-</div>`
-}
+    static appendEmployeeCard(projectDirectory) {return `
+    <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
+    <div class="card-header bg-primary text-white">${projectDirectory.name}<br />${projectDirectory.role}</div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">${projectDirectory.id}</li>
+        <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
+                class="card-link">${projectDirectory.email}</a></li>
+        <li class="list-group-item">Office Number: ${projectDirectory.officeNumber}</li>
+    </ul>
+    </div>`
+        }
     //Need to create a function that when I input the 
-    static generateHTML(answers) {
-        return `
+    static generateHTML(projectDirectory) {
+    return `
         <!DOCTYPE html>
 <html lang="en">
 
@@ -31,39 +31,13 @@ static appendEmployeeCard() {`
     <header>
         <nav class="navbar-brand bg-body-tertiary">
             <div class="container-fluid bg-danger text-white">
-                <h1 class="navbar-text p-3 text-center">${answers.title}</h1>
+                <h1 class="navbar-text p-3 text-center">My Team</h1>
             </div>
         </nav>
     </header>
 
     <main class="grid gap-3 text-center">
-        <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">$Jarrett<br />👓Manager</div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 1</li>
-                <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
-                        class="card-link">jbutler98@hotmail.com</a></li>
-                <li class="list-group-item">Office Number: 1</li>
-            </ul>
-        </div>
-        <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">Katie<br />👓Employee</div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 2</li>
-                <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
-                        class="card-link">jbutler98@hotmail.com</a></li>
-                <li class="list-group-item">Github: <a href="https://github.com/jarrettbutler" target="_blank"
-                        class="card-link">jarrettbutler</a></li>
-            </ul>
-        </div>
-        <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-            <div class="card-header bg-primary text-white">Maurice<br />🧑‍🎓Intern</div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: 3</li>
-                <li class="list-group-item">Email: <a href="mailto: jbutler98@hotmail.com"
-                        class="card-link">jbutler98@hotmail.com</a></li>
-                <li class="list-group-item">School: Harvard</li>
-            </ul>
+        ${this.appendEmployeeCard(projectDirectory)}
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
@@ -71,6 +45,7 @@ static appendEmployeeCard() {`
 </body>
 </html>
         `
-    }
+}
 }
 module.exports = HTML;
+
