@@ -7,11 +7,19 @@ class HTML {
         <li class="list-group-item">${projectDirectory.id}</li>
         <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
                 class="card-link">${projectDirectory.email}</a></li>
-        <li class="list-group-item">Office Number: ${projectDirectory.officeNumber}</li>
+        ${this.appendCustom(projectDirectory.role)}
     </ul>
     </div>`
         }
-    //Need to create a function that when I input the 
+    //Need to create a function that when I input the role it will give that section for the specific role
+    static appendCustom(projectDirectory) {
+        const role={
+            manager: `<li class="list-group-item">Office Number: ${projectDirectory.officeNumber}</li>`,
+            engineer: `<li class="list-group-item">Office Number: ${projectDirectory.github}</li>`,
+            intern: `<li class="list-group-item">Office Number: ${projectDirectory.school}</li>`,
+        }
+        return role[projectDirectory]
+    }
     static generateHTML(answers) {
     return `
         <!DOCTYPE html>
