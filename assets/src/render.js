@@ -56,7 +56,7 @@ var custom = ``;
                 custom=custom+ `<li class="list-group-item">Office Number:  ${projectDirectory.officeNumber}</li>`;
             } 
             else if(projectDirectory.github){
-                custom=custom+ `<li class="list-group-item">Github account:  ${projectDirectory.github}</li>`;
+                custom=custom+ `<li class="list-group-item">Github account: <a href="${projectDirectory.github}" target="_blank">${projectDirectory.github}</a></li>`;
             } 
             else {
                 custom=custom+ `<li class="list-group-item">School:  ${projectDirectory.school}</li>`;
