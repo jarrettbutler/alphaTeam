@@ -7,7 +7,7 @@ class HTML {
         <li class="list-group-item">${projectDirectory.id}</li>
         <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
                 class="card-link">${projectDirectory.email}</a></li>
-        ${this.appendCustom(projectDirectory.role)}
+         ${this.appendCustom(projectDirectory.role)}
     </ul>
     </div>`
         }
@@ -20,7 +20,7 @@ class HTML {
         }
         return role[projectDirectory]
     }
-    static generateHTML(answers) {
+    static generateHTML() {
     return `
         <!DOCTYPE html>
 <html lang="en">
@@ -45,7 +45,7 @@ class HTML {
     </header>
 
     <main class="grid gap-3 text-center">
-        ${this.appendEmployeeCard(answers.projectDirectory)}
+        ${this.appendEmployeeCard}
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
