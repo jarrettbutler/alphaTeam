@@ -262,7 +262,7 @@ const internQuestions = () => {
 //Which then creates the index.html file so that it can auto fill the requirements
 const finished = () => {
     console.log(projectDirectory);
-    const html = HTML.generateHTML(projectDirectory)
+    const html = HTML(projectDirectory)
     fs.writeFile('./dist/index.html', html, function (err) {
         if (err) {
             console.log('Could not save file', err);
@@ -272,5 +272,5 @@ const finished = () => {
     })
 };
 
-// initialQuestions();
+// initialQuestions(); <- this would've been the satrt if i figured out how to import extra variables, it would've been a custom title.
 managerQuestions();
