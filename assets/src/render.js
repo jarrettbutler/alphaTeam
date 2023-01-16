@@ -4,8 +4,8 @@ class HTML {
     <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
     <div class="card-header bg-primary text-white">${projectDirectory.name}<br />${projectDirectory.role}</div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">${projectDirectory.id}</li>
-        <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
+        <li class="list-group-item">ID: ${projectDirectory.id}</li>
+        <li class="list-group-item">Email:  <a href="mailto: ${projectDirectory.email}"
                 class="card-link">${projectDirectory.email}</a></li>
          ${this.appendCustom}
     </ul>
@@ -14,9 +14,9 @@ class HTML {
     //Need to create a function that when I input the role it will give that section for the specific role
     static appendCustom(projectDirectory) {
         const role={
-            manager: `<li class="list-group-item">Office Number: ${projectDirectory.officeNumber}</li>`,
-            engineer: `<li class="list-group-item">Office Number: ${projectDirectory.github}</li>`,
-            intern: `<li class="list-group-item">Office Number: ${projectDirectory.school}</li>`,
+            manager: `<li class="list-group-item">Office Number:  ${projectDirectory.officeNumber}</li>`,
+            engineer: `<li class="list-group-item">Github account:  ${projectDirectory.github}</li>`,
+            intern: `<li class="list-group-item">School:  ${projectDirectory.school}</li>`,
         }
         return role[projectDirectory]
     }

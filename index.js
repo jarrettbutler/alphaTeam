@@ -120,7 +120,6 @@ const newEmployeeQuestions = () => {
             name: 'memberType',
             message: 'Would you like to add an Engineer or Intern?',
             choices: ['Engineer', 'Intern'],
-            when: (answers) => answers['addMember'] === 'Yes',
         },])
         .then((answers) => {
             switch (answers.memberType) {
