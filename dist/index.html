@@ -24,12 +24,12 @@
     <main class="grid gap-3 text-center">
         appendEmployeeCard(projectDirectory) {return `
     <div class="card d-inline-block shadow p-3 mb-5 bg-body-tertiary rounded text-center" style="width: 18rem;">
-    <div class="card-header bg-primary text-white">${projectDirectory.name}<br />${pro.role}</div>
+    <div class="card-header bg-primary text-white">${projectDirectory.name}<br />${projectDirectory.role}</div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">${projectDirectory.id}</li>
         <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
                 class="card-link">${projectDirectory.email}</a></li>
-         ${this.appendCustom(projectDirectory.role)}
+         ${this.appendCustom}
     </ul>
     </div>`
         }

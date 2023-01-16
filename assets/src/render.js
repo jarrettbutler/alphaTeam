@@ -7,7 +7,7 @@ class HTML {
         <li class="list-group-item">${projectDirectory.id}</li>
         <li class="list-group-item">Email: <a href="mailto: ${projectDirectory.email}"
                 class="card-link">${projectDirectory.email}</a></li>
-         ${this.appendCustom(projectDirectory.role)}
+         ${this.appendCustom}
     </ul>
     </div>`
         }
